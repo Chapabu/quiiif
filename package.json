@@ -1,0 +1,23 @@
+{
+  "name": "quiiif",
+  "version": "0.0.1",
+  "description": "Query builder for IIIF URLs.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chapabu/quiiif.git"
+  },
+  "keywords": [
+    "iiif",
+    "query-builder"
+  ],
+  "author": "Matt Chapman <chapabu101@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chapabu/quiiif/issues"
+  },
+  "homepage": "https://github.com/Chapabu/quiiif#readme"
+}
