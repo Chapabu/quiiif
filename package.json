@@ -19,5 +19,17 @@
   "bugs": {
     "url": "https://github.com/Chapabu/quiiif/issues"
   },
-  "homepage": "https://github.com/Chapabu/quiiif#readme"
+  "homepage": "https://github.com/Chapabu/quiiif#readme",
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "husky": "^4.2.5",
+    "jest": "^26.4.0",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.2.0",
+    "typescript": "^3.9.7"
+  }
 }
