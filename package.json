@@ -20,7 +20,17 @@
     "url": "https://github.com/Chapabu/quiiif/issues"
   },
   "homepage": "https://github.com/Chapabu/quiiif#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
     "eslint": "^7.6.0",
     "eslint-config-airbnb-typescript": "^9.0.0",
     "eslint-config-prettier": "^6.11.0",
@@ -29,6 +39,7 @@
     "husky": "^4.2.5",
     "jest": "^26.4.0",
     "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
     "ts-jest": "^26.2.0",
     "typescript": "^3.9.7"
   }
