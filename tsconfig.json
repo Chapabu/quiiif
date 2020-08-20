@@ -11,8 +11,9 @@
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "declaration": true
   },
-  "include": ["./src/**/*.ts"],
+  "include": ["./src/**/*.ts", "./.eslintrc.js"],
   "exclude": ["node_modules/**/*"]
 }
