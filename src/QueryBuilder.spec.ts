@@ -40,17 +40,17 @@ describe('QueryBuilder', () => {
     );
   });
 
-  it('adds in the image path if it exists', () => {
+  it('adds in a prefix if it exists', () => {
     const opts: QueryBuilderOpts = {
       baseUrl: 'https://example.com',
       imageId: 'my-image.ptif',
-      path: 'some-path',
+      prefix: 'some-prefix',
     };
 
     const queryBuilder = new QueryBuilder(opts);
 
     expect(queryBuilder.infoUrl).toBe(
-      'https://example.com/some-path/my-image.ptif/info.json'
+      'https://example.com/some-prefix/my-image.ptif/info.json'
     );
   });
 });

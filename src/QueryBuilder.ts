@@ -1,7 +1,7 @@
 export interface QueryBuilderOpts {
   baseUrl: string;
   imageId: string;
-  path?: string;
+  prefix?: string;
 }
 
 class QueryBuilder {
@@ -12,8 +12,8 @@ class QueryBuilder {
   constructor({ baseUrl, imageId, ...opts }: QueryBuilderOpts) {
     this.baseUrl = baseUrl.replace(/\/+$/, '');
 
-    if (opts.path) {
-      this.baseUrl += `/${opts.path}`;
+    if (opts.prefix) {
+      this.baseUrl += `/${opts.prefix}`;
     }
 
     this.imageId = imageId;
