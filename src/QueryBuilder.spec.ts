@@ -1,4 +1,4 @@
-import QueryBuilder, { QueryBuilderOpts } from './QueryBuilder';
+import { QueryBuilder, QueryBuilderOpts } from './QueryBuilder';
 
 describe('QueryBuilder', () => {
   it('returns an info url', () => {

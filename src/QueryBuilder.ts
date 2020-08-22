@@ -4,10 +4,25 @@ export interface QueryBuilderOpts {
   prefix?: string;
 }
 
-class QueryBuilder {
+export type ImageFormat =
+  | 'jpg'
+  | 'tif'
+  | 'png'
+  | 'gif'
+  | 'jp2'
+  | 'pdf'
+  | 'webp';
+
+export type ImageQuality = 'color' | 'gray' | 'bitonal' | 'default';
+
+export class QueryBuilder {
   readonly baseUrl: string;
 
   readonly imageId: string;
+
+  public format: ImageFormat = 'jpg';
+
+  public quality: ImageQuality = 'default';
 
   constructor({ baseUrl, imageId, ...opts }: QueryBuilderOpts) {
     this.baseUrl = baseUrl.replace(/\/+$/, '');
@@ -23,5 +38,3 @@ class QueryBuilder {
     return `${this.baseUrl}/${this.imageId}/info.json`;
   }
 }
-
-export default QueryBuilder;
