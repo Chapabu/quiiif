@@ -78,4 +78,31 @@ describe('Size', () => {
       }
     );
   });
+
+  describe('percentages', () => {
+    it('returns paramaters for standard percentages', () => {
+      const sizeOpts: SizeOpts = {
+        percent: 85,
+      };
+      const size = new Size(sizeOpts);
+      expect(size.parameters).toBe('pct:85');
+    });
+
+    it('returns paramaters for upscaled percentages', () => {
+      const sizeOpts: SizeOpts = {
+        percent: 200,
+        upscale: true,
+      };
+      const size = new Size(sizeOpts);
+      expect(size.parameters).toBe('^pct:200');
+    });
+
+    it('automatically upscales if percentage is > 100', () => {
+      const sizeOpts: SizeOpts = {
+        percent: 200,
+      };
+      const size = new Size(sizeOpts);
+      expect(size.parameters).toBe('^pct:200');
+    });
+  });
 });

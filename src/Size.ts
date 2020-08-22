@@ -22,7 +22,7 @@ export class Size {
 
   constructor(opts: SizeOpts) {
     this.max = opts.max;
-    this.upscale = opts.upscale;
+    this.upscale = opts.upscale || Number(opts.percent) > 100;
     this.percent = opts.percent;
     this.width = opts.width;
     this.height = opts.height;
@@ -44,6 +44,10 @@ export class Size {
 
     if (this.width && this.height && this.preserveAspectRatio) {
       prefix += '!';
+    }
+
+    if (this.percent) {
+      parameters = `pct:${this.percent}`;
     }
 
     return `${prefix}${parameters}`;
